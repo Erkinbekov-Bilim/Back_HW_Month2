@@ -59,7 +59,7 @@ def get_user_with_grades():
     cursor.execute('''
         SELECT users.id , users.fio, grades.subject, grades.grade
         FROM users
-        LEFT JOIN grades ON users.id = grades.userid
+        INNER JOIN grades ON users.id = grades.userid
         
     ''')
 
